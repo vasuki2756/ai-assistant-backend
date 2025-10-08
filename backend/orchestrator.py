@@ -6,12 +6,20 @@ import google.generativeai as genai
 import json
 
 # Import all agents
-from .agents.learning_agent import get_learning_resources
-from .agents.schedule_agent import get_study_plan
-from .agents.wellness_agent import get_wellness_assessment
-from .agents.assessment_agent import generate_quiz
-from .agents.personalization_agent import get_personalized_path
-from .agents.motivation_agent import get_motivational_support
+import sys
+import os
+
+# Add the current directory to Python path for absolute imports
+current_dir = os.path.dirname(os.path.abspath(__file__))
+if current_dir not in sys.path:
+    sys.path.insert(0, current_dir)
+
+from agents.learning_agent import get_learning_resources
+from agents.schedule_agent import get_study_plan
+from agents.wellness_agent import get_wellness_assessment
+from agents.assessment_agent import generate_quiz
+from agents.personalization_agent import get_personalized_path
+from agents.motivation_agent import get_motivational_support
 
 class OrchestratorState(TypedDict):
     """State for the orchestrator graph."""

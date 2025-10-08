@@ -1,5 +1,3 @@
-"""Wellness Agent - Monitors stress, fatigue, and mental health with Hume AI emotion detection."""
-
 from typing import Dict, Any, List
 import random
 import time
@@ -9,7 +7,6 @@ import base64
 import io
 import json
 from PIL import Image
-import numpy as np
 from dotenv import load_dotenv
 
 try:

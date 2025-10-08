@@ -109,13 +109,13 @@ class ScheduleAgent:
         """Create study sessions spread over days."""
         sessions = []
 
-        # Split into manageable chunks
+        
         if difficulty == "beginner":
-            session_duration = 1.0  # 1 hour sessions
+            session_duration = 1.0  
         elif difficulty == "intermediate":
-            session_duration = 1.5  # 1.5 hour sessions
+            session_duration = 1.5  
         else:  # advanced
-            session_duration = 2.0  # 2 hour sessions
+            session_duration = 2.0  
 
         num_sessions = max(1, int(total_hours / session_duration))
         hours_per_session = total_hours / num_sessions
@@ -124,7 +124,7 @@ class ScheduleAgent:
 
         for i in range(num_sessions):
             if i > 0:
-                # Add a day gap
+                
                 current_date += timedelta(days=1)
 
             session_resources = resources[i % len(resources)] if resources else {}

@@ -20,7 +20,7 @@ hume>=0.3.0
 
 # Computer vision for webcam capture
 opencv-python==4.8.1.78
-numpy>=1.24.0
+numpy==1.24.3
 
 # Additional dependencies for Hume AI
 aiohttp>=3.9.0
